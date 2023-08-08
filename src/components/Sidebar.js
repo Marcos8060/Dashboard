@@ -18,7 +18,7 @@ const Sidebar = ({ collapsed, setCollapsed, shown }) => {
         "bg-[#272684] shadow-2xl text-primary z-20": true,
         "fixed md:static md:translate-x-0": true,
         "w-[300px]": !collapsed,
-        "w-16": collapsed,
+        "w-16 transition ease-in-out delay-150": collapsed,
         "-translate-x-full": !shown,
       })}
     >
@@ -39,7 +39,7 @@ const Sidebar = ({ collapsed, setCollapsed, shown }) => {
           <button
             className={cn({
               "grid place-content-center": true, // position
-              "hover:bg-primary text-white ": true, // colors
+              "hover:bg-[#2C5BCD] transition ease-in-out delay-150 text-white ": true, // colors
               "w-10 h-10 rounded-full": true, // shape
             })}
             // 👇 set the collapsed state on click
@@ -56,7 +56,7 @@ const Sidebar = ({ collapsed, setCollapsed, shown }) => {
             <li
               key={index}
               className={classNames({
-                "text-indigo-100 hover:bg-indigo-900 flex": true,
+                "text-indigo-100 hover:bg-[#2C5BCD] flex": true,
                 "transition-colors duration-300": true,
                 "rounded-md p-2 mx-3 gap-4": !collapsed,
                 "rounded-full p-2 mx-3 w-10 h-10": collapsed,
