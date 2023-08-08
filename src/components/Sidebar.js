@@ -11,7 +11,6 @@ import classNames from "classnames";
 
 const Sidebar = ({ collapsed, setCollapsed, shown }) => {
   
-
   // 👇 use the correct icon depending on the state.
   const Icon = collapsed ? ChevronDoubleRightIcon : ChevronDoubleLeftIcon;
   return (
