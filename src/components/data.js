@@ -12,7 +12,7 @@ import {
 export const defaultNavItems = [
   {
     label: "Dashboard",
-    href: "/",
+    href: "/dashboard",
     icon: <HomeIcon className="w-6 h-6" />,
   },
   {

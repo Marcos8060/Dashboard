@@ -1,10 +1,11 @@
 // components/Layout.tsx
 import classNames from "classnames";
 import React, { useState } from "react";
-import MenuIcon from '@mui/icons-material/Menu';
+import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   const [collapsed, setSidebarCollapsed] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(true);
   return (
     <div
       className={classNames({
@@ -18,17 +19,15 @@ const Layout = ({children}) => {
       })}
     >
       {/* sidebar */}
-      <Sidebar 
-       collapsed={collapsed}
-       setCollapsed={()=> setSidebarCollapsed((prev) => !prev)}
+      <Sidebar
+        collapsed={collapsed}
+        setCollapsed={() => setSidebarCollapsed((prev) => !prev)}
+        shown={showSidebar}
       />
-      {/* <div className="bg-indigo-700 text-white">
-        <button onClick={() => setSidebarCollapsed((prev) => !prev)}>
-          <MenuIcon className="w-10 h-10" />
-        </button>
-      </div> */}
-      {/* content */}
-      <div className=""> {children}</div>
+      <div>
+        <Navbar onMenuButtonClick={() => setShowSidebar((prev) => !prev)} />
+        <div className=""> {children}</div>
+      </div>
     </div>
   );
 };

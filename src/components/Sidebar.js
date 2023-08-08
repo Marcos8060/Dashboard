@@ -9,15 +9,17 @@ import Link from "next/link";
 import { defaultNavItems } from "./data";
 import classNames from "classnames";
 
-
-
-const Sidebar = ({ collapsed, setCollapsed }) => {
+const Sidebar = ({ collapsed, setCollapsed, shown }) => {
   // 👇 use the correct icon depending on the state.
   const Icon = collapsed ? ChevronDoubleRightIcon : ChevronDoubleLeftIcon;
   return (
     <div
       className={cn({
         "bg-indigo-700 text-zinc-50 z-20": true,
+        "fixed md:static md:translate-x-0": true,
+        "w-[300px]": !collapsed,
+        "w-16": collapsed,
+        "-translate-x-full": !shown,
       })}
     >
       <div
@@ -67,24 +69,6 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
           ))}
         </ul>
       </nav>
-
-      <div className="grid place-content-stretch p-4">
-        <div className="flex gap-4 items-center overflow-hidden">
-          {!collapsed && (
-            <>
-              <img
-                className="object-cover w-16 h-16 rounded-full"
-                src="/images/maureen.jpeg"
-                alt=""
-              />
-              <div className="flex flex-col">
-                <span>Thomas Cook</span>
-                <Link href="/">View Profile</Link>
-              </div>
-            </>
-          )}
-        </div>
-      </div>
     </div>
   );
 };
