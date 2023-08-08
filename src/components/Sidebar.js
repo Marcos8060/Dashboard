@@ -9,6 +9,8 @@ import Link from "next/link";
 import { defaultNavItems } from "./data";
 import classNames from "classnames";
 
+
+
 const Sidebar = ({ collapsed, setCollapsed }) => {
   // 👇 use the correct icon depending on the state.
   const Icon = collapsed ? ChevronDoubleRightIcon : ChevronDoubleLeftIcon;
