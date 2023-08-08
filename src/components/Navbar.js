@@ -9,13 +9,13 @@ const Navbar = (props) => {
   return (
     <nav
       className={classNames({
-        "bg-white text-zinc-500": true, // colors
+        "bg-[#272684] text-white": true, // colors
         // "flex items-center": true, // layout
         "w-screen md:w-full sticky z-10 px-4 shadow-sm h-[73px] top-0 ": true, //positioning & styling
       })}
     >
       <div className="flex items-center justify-between">
-        <div className="font-bold text-lg">Admin Panel</div>
+        <div className="text-lg">Admin Panel</div>
         <div className="grid place-content-stretch p-4">
           <div className="flex gap-4 items-center overflow-hidden">
             <img

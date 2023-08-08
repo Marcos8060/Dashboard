@@ -6,6 +6,10 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    // colors:{
+    //   primary: '#002E5E',
+    //   white: '#FFFFFF',
+    // },
     extend: {
       gridTemplateColumns: {
         sidebar: "300px auto", //for sidebar layout

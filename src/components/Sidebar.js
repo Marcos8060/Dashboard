@@ -15,7 +15,7 @@ const Sidebar = ({ collapsed, setCollapsed, shown }) => {
   return (
     <div
       className={cn({
-        "bg-indigo-700 text-zinc-50 z-20": true,
+        "bg-[#272684] shadow-2xl text-primary z-20": true,
         "fixed md:static md:translate-x-0": true,
         "w-[300px]": !collapsed,
         "w-16": collapsed,
@@ -35,11 +35,11 @@ const Sidebar = ({ collapsed, setCollapsed, shown }) => {
             "py-4 justify-center": collapsed,
           })}
         >
-          {!collapsed && <span className="whitespace-nowrap">My Logo</span>}
+          {!collapsed && <span className="whitespace-nowrap text-white">My Logo</span>}
           <button
             className={cn({
               "grid place-content-center": true, // position
-              "hover:bg-indigo-800 ": true, // colors
+              "hover:bg-primary text-white ": true, // colors
               "w-10 h-10 rounded-full": true, // shape
             })}
             // 👇 set the collapsed state on click
