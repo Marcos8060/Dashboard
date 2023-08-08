@@ -8,17 +8,28 @@ import {
 } from "@heroicons/react/24/outline";
 
 
-
-export const defaultNavItems = [
+export const menus = [
   {
     label: "Dashboard",
     href: "/dashboard",
     icon: <HomeIcon className="w-6 h-6" />,
   },
   {
-    label: "Team",
+    label: "Users",
     href: "/team",
     icon: <UserGroupIcon className="w-6 h-6" />,
+    children: [
+      {
+        label: "All Users",
+        href: "/dashboard/users/all-users",
+        icon: <UserGroupIcon className="w-6 h-6" />,
+      },
+      {
+        label: "Approved Users",
+        href: "/dashboard/users/approved-users",
+        icon: <UserGroupIcon className="w-6 h-6" />,
+      },
+    ],
   },
   {
     label: "Projects",

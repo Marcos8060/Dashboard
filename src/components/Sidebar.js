@@ -1,15 +1,17 @@
-// components/Sidebar.tsx
-import React from "react";
+// // components/Sidebar.tsx
+import React, { useState } from "react";
 import cn from "classnames";
 import {
   ChevronDoubleLeftIcon,
   ChevronDoubleRightIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { defaultNavItems } from "./data";
+import { menus } from "./data";
 import classNames from "classnames";
 
 const Sidebar = ({ collapsed, setCollapsed, shown }) => {
+  
+
   // 👇 use the correct icon depending on the state.
   const Icon = collapsed ? ChevronDoubleRightIcon : ChevronDoubleLeftIcon;
   return (
@@ -52,7 +54,7 @@ const Sidebar = ({ collapsed, setCollapsed, shown }) => {
 
       <nav className="flex-grow">
         <ul className="my-2 flex flex-col gap-2 items-stretch">
-          {defaultNavItems.map((item, index) => (
+          {menus.map((item, index) => (
             <li
               key={index}
               className={classNames({

@@ -9,7 +9,7 @@ const Navbar = (props) => {
   return (
     <nav
       className={classNames({
-        "bg-[#272684] text-white": true, // colors
+        "bg-[#272684] text-white shadow-xl": true, // colors
         // "flex items-center": true, // layout
         "w-screen md:w-full sticky z-10 px-4 shadow-sm h-[73px] top-0 ": true, //positioning & styling
       })}
