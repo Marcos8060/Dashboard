@@ -36,7 +36,7 @@ const Sidebar = ({ collapsed, setCollapsed, shown }) => {
             "py-4 justify-center": collapsed,
           })}
         >
-          {!collapsed && <span className="whitespace-nowrap text-white">My Logo</span>}
+          {!collapsed && <img src="/images/me.png" className="whitespace-nowrap w-16 text-white" />}
           <button
             className={cn({
               "grid place-content-center": true, // position
